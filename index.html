@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyns Portfolio</title>
+    <title>Wyns Official</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Primetime, sans-serif;
         }
 
         /* Common styles */
@@ -125,6 +125,11 @@
                 currentPage = (index + 1) % pages.length + 1;
                 showPage(currentPage - 1);
             });
+            // Add functionality for the back button
+            if (page.querySelector('.back-button')) {
+                page.querySelector('.back-button').addEventListener('click', () => {
+                    currentPage = 1; // Go back to page 1
+                    showPage(currentPage - 1);
         });
     </script>
 </body>
