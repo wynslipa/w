@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wyns Official</title>
+    <title>WYNS OFFICIAL</title>
     <style>
         body {
             margin: 0;
@@ -17,6 +17,7 @@
             align-items: center;
             height: 100vh;
             text-align: center;
+            position: relative; /* Added to position buttons */
         }
 
         .email {
@@ -28,10 +29,11 @@
             font-size: 14px;
         }
 
+        /* Updated Back to Home button position to fixed at the bottom right */
         .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Positioned at bottom */
+            right: 20px; /* Positioned at right */
             color: white;
             text-decoration: none;
             background-color: #c8102e; /* Dark Red */
@@ -39,8 +41,11 @@
             border-radius: 5px;
         }
 
-        /* Next button styles */
+        /* Changed next button position to the right top */
         .next-button {
+            position: absolute; /* Keep absolute for positioning */
+            top: 20px; /* Position at top */
+            right: 20px; /* Position at right */
             color: white;
             background-color: #c8102e; /* Dark Red */
             padding: 10px 20px;
@@ -108,6 +113,7 @@
     <!-- Page 2 -->
     <div id="page2" class="container" style="display: none;">
         <div>
+            <!-- Updated position of Back to Home button -->
             <a href="#page1" class="back-button">Back to Home</a>
             <img src="album_cover.jpg" alt="Album Cover"> <!-- Replace with your album cover image -->
             <h2>WONDA</h2>
@@ -118,15 +124,17 @@
     <!-- Page 3 -->
     <div id="page3" class="container" style="display: none;">
         <div>
+            <!-- Updated position of Back to Home button -->
             <a href="#page1" class="back-button">Back to Home</a>
             <h2>FOLLOW:</h2>
             <div class="social-icons">
                 <a href="https://www.instagram.com/wynslipa" target="_blank"><img src="instagram_icon.png" alt="Instagram"></a>
-                <a href="https://www.tiktok.com/wynslipa" target="_blank"><img src="tiktok_icon.png" alt="TikTok"></a>
-                <a href="https://www.youtube.com/channel/wynslipa" target="_blank"><img src="youtube_icon.png" alt="YouTube"></a>
+                <a href="https://www.tiktok.com/@wynslipa" target="_blank"><img src="tiktok_icon.png" alt="TikTok"></a>
+                <a href="https://www.youtube.com/channe/wynslipa" target="_blank"><img src="youtube_icon.png" alt="YouTube"></a>
                 <a href="https://twitter.com/wynslipa" target="_blank"><img src="twitter_icon.png" alt="Twitter"></a>
-                <a href="https://www.facebook.com/wyns william" target="_blank"><img src="facebook_icon.png" alt="Facebook"></a>
+                <a href="https://www.facebook.com/Wyns William" target="_blank"><img src="facebook_icon.png" alt="Facebook"></a>
             </div>
+            <!-- Removed the names of the social apps -->
         </div>
         <a href="mailto:wwlabelw@gmail.com" class="email">wwlabelw@gmail.com</a>
     </div>
@@ -163,4 +171,3 @@
     </script>
 </body>
 </html>
-
