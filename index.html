@@ -7,52 +7,52 @@
     <style>
         body {
             margin: 0;
-            font-family: Primetime, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
-        /* Common styles */
+        /* Common container styles */
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
-            position: relative; /* Added to position buttons */
+            position: relative;
+        }
+
+        /* Adjusting button and email positions */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: #c8102e;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .next-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: white;
+            background-color: #c8102e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
         }
 
         .email {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 50%; 
+            transform: translateX(-50%);
             color: white;
             text-decoration: none;
             font-size: 14px;
-        }
-
-        /* Updated Back to Home button position to fixed at the bottom left */
-        .back-button {
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Positioned at bottom */
-            left: 20px; /* Positioned at left */
-            color: white;
-            text-decoration: none;
-            background-color: #c8102e; /* Dark Red */
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        /* Changed next button position to the right top */
-        .next-button {
-            position: absolute; /* Keep absolute for positioning */
-            top: 20px; /* Position at top */
-            right: 20px; /* Position at right */
-            color: white;
-            background-color: #c8102e; /* Dark Red */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
         }
 
         /* Page 1 styles */
@@ -62,7 +62,7 @@
         }
 
         #page1 h1 {
-            font-size: 60px; /* Adjust for mobile */
+            font-size: 60px;
             text-shadow: 2px 2px 5px #000;
         }
 
@@ -73,8 +73,8 @@
         }
 
         #page2 img {
-            width: 300px; /* Adjust for mobile */
-            height: 300px; /* 1:1 ratio */
+            width: 300px; /* 1:1 ratio */
+            height: 300px;
         }
 
         /* Page 3 styles */
@@ -90,14 +90,14 @@
         }
 
         .social-icons img {
-            width: 40px; /* Icon size */
+            width: 40px;
             height: 40px;
         }
 
         /* Responsive styles */
         @media (max-width: 600px) {
             #page1 h1 {
-                font-size: 40px; /* Adjust for mobile */
+                font-size: 40px;
             }
         }
     </style>
@@ -113,30 +113,34 @@
     <!-- Page 2 -->
     <div id="page2" class="container" style="display: none;">
         <div>
-            <!-- Updated position of Back to Home button -->
-            <a href="#page1" class="back-button">Back to Home</a>
             <img src="album_cover.jpg" alt="Album Cover"> <!-- Replace with your album cover image -->
             <h2>WONDA</h2>
         </div>
+        <a href="#page1" class="back-button">Back to Home</a>
         <a href="#page3" class="next-button">Next</a>
     </div>
 
     <!-- Page 3 -->
     <div id="page3" class="container" style="display: none;">
-        <div>
-            <!-- Updated position of Back to Home button -->
-            <a href="#page1" class="back-button">Back to Home</a>
-            <h2>FOLLOW:</h2>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/wynslipa" target="_blank"><img src="instagram_icon.png"</a>
-                <a href="https://www.tiktok.com/@wynslipa" target="_blank"><img src="tiktok_icon.png"</a>
-                <a href="https://www.youtube.com/channe/wynslipa" target="_blank"><img src="youtube_icon.png"</a>
-                <a href="https://twitter.com/wynslipa" target="_blank"><img src="twitter_icon.png" alt="Twitter"</a>
-                <a href="https://www.facebook.com/Wyns William" target="_blank"><img src="facebook_icon.png" </a>
-            </div>
-        <!-- Removed the names of the social apps -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/WYNSLIPA" target="_blank">
+                <img src="instagram_icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.tiktok.com/@WYNSLIPA" target="_blank">
+                <img src="tiktok_icon.png" alt="TikTok Icon">
+            </a>
+            <a href="https://www.youtube.com/channel/WYNSLIPA" target="_blank">
+                <img src="youtube_icon.png" alt="YouTube Icon">
+            </a>
+            <a href="https://twitter.com/WYNSLIPA" target="_blank">
+                <img src="twitter_icon.png" alt="Twitter Icon">
+            </a>
+            <a href="https://www.facebook.com/WYNS WILLIAM" target="_blank">
+                <img src="facebook_icon.png" alt="Facebook Icon">
+            </a>
         </div>
         <a href="mailto:wwlabelw@gmail.com" class="email">wwlabelw@gmail.com</a>
+        <a href="#page1" class="back-button">Back to Home</a>
     </div>
 
     <script>
