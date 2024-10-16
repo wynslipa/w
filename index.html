@@ -3,176 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WYNS OFFICIAL</title>
+    <title>WYNSLIPA.COM</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* Common container styles */
-        .container {
+        /* Page 1: Introduction */
+        #page1 {
+            background-color: #8B0000; /* Dark red */
+            color: white;
+            text-align: center;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
         }
 
-        /* Adjusting button and email positions */
-        .back-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            color: white;
-            background-color: #c8102e;
-            padding: 10px;
-            border-radius: 5px;
+        .artist-name {
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(to right, silver, #ddd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Buttons for navigation */
+        .nav-buttons {
+            display: flex;
+            justify-content: flex-start;
+            position: absolute;
+            width: 90%;
+            bottom: 10px;
+        }
+
+        .nav-buttons a {
             text-decoration: none;
-            font-size: 14px;
-        }
-
-        .next-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            color: white;
-            background-color: #c8102e;
+            background-color: white;
+            color: #8B0000;
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
+            margin-right: 10px;
         }
 
-        .email {
-            position: fixed;
-            bottom: 20px;
-            left: 50%; 
-            transform: translateX(-50%);
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        /* Page 1 styles */
-        #page1 {
-            background-color: #c8102e; /* Dark Red */
-            color: white;
-        }
-
-        #page1 h1 {
-            font-size: 60px;
-            text-shadow: 2px 2px 5px #000;
-        }
-
-        /* Page 2 styles */
+        /* Page 2: Social Media Links */
         #page2 {
             background-color: white;
-            color: #c8102e; /* Dark Red */
+            color: #8B0000;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        #page2 img {
-            width: 300px; /* 1:1 ratio */
-            height: 300px;
-        }
-
-        /* Page 3 styles */
-        #page3 {
-            background-color: #c8102e; /* Dark Red */
-            color: white;
+        #follow {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 10px;
         }
 
-        .social-icons img {
+        .social-icon {
             width: 40px;
             height: 40px;
+            cursor: pointer;
         }
 
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            #page1 h1 {
-                font-size: 40px;
-            }
+        /* Page 3: Announcements */
+        #page3 {
+            background-color: #8B0000;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .email {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+        }
+
+        .email a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <!-- Page 1: Introduction -->
+    <div id="page1">
+        <div class="artist-name">WYNS</div>
+        <div>Feel this aura, you can go down lower.</div>
+        <img class="logo" src="<!-- PASTE ALBUM COVER PHOTO URL HERE -->" alt="Album Cover">
 
-    <!-- Page 1 -->
-    <div id="page1" class="container">
-        <h1>WYNS</h1>
-        <a href="#page2" class="next-button">Next</a>
-    </div>
-
-    <!-- Page 2 -->
-    <div id="page2" class="container" style="display: none;">
-        <div>
-            <img src="album_cover.jpg" alt="Album Cover"> <Image 2024-10-16 at 18.49.57_c510ea40.jpg>
-            <h2>WONDA</h2>
+        <div class="nav-buttons">
+            <a href="#page2">Next</a>
         </div>
-        <a href="#page1" class="back-button">Back to Home</a>
-        <a href="#page3" class="next-button">Next</a>
+        <div class="email">
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </div>
     </div>
 
-    <!-- Page 3 -->
-    <div id="page3" class="container" style="display: none;">
-        <h2>FOLLOW</h2>
+    <!-- Page 2: Social Media Links -->
+    <div id="page2">
+        <div id="follow">FOLLOW</div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/WYNSLIPA" target="_blank">
-                <img src="Image 2024-10-16 at 18.50.26_23f69756.jpg" alt=">
+            <!-- Instagram -->
+            <a href="https://instagram.com/wynslipa" target="_blank">
+                <img class="social-icon" 
+                     src="<!-- PASTE INSTAGRAM ICON URL HERE -->" 
+                     alt="Instagram">
             </a>
-            <a href="https://www.tiktok.com/@WYNSLIPA" target="_blank">
-                <img src="tiktok_icon.png" alt=">
+            
+            <!-- Facebook -->
+            <a href="https://facebook.com/Wyns William" target="_blank">
+                <img class="social-icon" 
+                     src="<!-- PASTE FACEBOOK ICON URL HERE -->" 
+                     alt="Facebook">
             </a>
-            <a href="https://www.youtube.com/channel/WYNSLIPA" target="_blank">
-                <img src="youtube_icon.png" alt=">
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/wynslipa" target="_blank">
+                <img class="social-icon" 
+                     src="<!-- PASTE TWITTER ICON URL HERE -->" 
+                     alt="Twitter">
             </a>
-            <a href="https://twitter.com/WYNSLIPA" target="_blank">
-                <img src="Image 2024-10-16 at 18.50.24_1146a8d0.jpg" alt=">
-            </a>
-            <a href="https://www.facebook.com/WYNS WILLIAM" target="_blank">
-                <img src="facebook_icon.png" alt=">
+
+            <!-- YouTube -->
+            <a href="https://WYNSLIPA" target="_blank">
+                <img class="social-icon" 
+                     src="<!-- PASTE YOUTUBE ICON URL HERE -->" 
+                     alt="YouTube">
             </a>
         </div>
-        <a href="mailto:wwlabelw@gmail.com" class="email">wwlabelw@gmail.com</a>
-        <a href="#page1" class="back-button">Back to Home</a>
+
+        <div class="nav-buttons">
+            <a href="#page3">Next</a>
+        </div>
+        <div class="email">
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </div>
     </div>
 
-    <script>
-        // Simple script to navigate between pages
-        let currentPage = 0;
-        const pages = [document.getElementById('page1'), document.getElementById('page2'), document.getElementById('page3')];
+    <!-- Page 3: Announcements -->
+    <div id="page3">
+        <h2>Announcements</h2>
+        <p>Details about upcoming projects go here.</p>
 
-        function showPage(pageIndex) {
-            pages.forEach((page, index) => {
-                page.style.display = (index === pageIndex) ? 'flex' : 'none';
-            });
-        }
-
-        showPage(currentPage);
-
-        // Next and Back button event listeners
-        document.querySelectorAll('.next-button').forEach((button, index) => {
-            button.addEventListener('click', () => {
-                currentPage = index + 1; // Move to the next page
-                if (currentPage < pages.length) {
-                    showPage(currentPage);
-                }
-            });
-        });
-
-        document.querySelectorAll('.back-button').forEach((button) => {
-            button.addEventListener('click', () => {
-                currentPage = 0; // Go back to page 1
-                showPage(currentPage);
-            });
-        });
-    </script>
+        <div class="nav-buttons">
+            <a href="#page1">Back to Home</a>
+        </div>
+        <div class="email">
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </div>
+    </div>
 </body>
 </html>
