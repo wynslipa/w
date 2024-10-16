@@ -5,173 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WYNSLIPA.COM</title>
     <style>
-        body {
+        /* Global Styles */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        /* Page 1: Introduction */
-        #page1 {
-            background-color: #8B0000; /* Dark red */
-            color: white;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        body {
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.5s ease;
         }
-
-        .artist-name {
-            font-size: 4em;
-            font-weight: bold;
-            background: linear-gradient(to right, silver, #ddd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .logo {
-            margin-top: 50px;
-            width: 150px;
-            height: 150px;
-        }
-
-        /* Buttons for navigation */
-        .nav-buttons {
-            display: flex;
-            justify-content: flex-start;
-            position: absolute;
-            width: 90%;
-            bottom: 10px;
-        }
-
-        .nav-buttons a {
+        a {
             text-decoration: none;
-            background-color: white;
-            color: #8B0000;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-right: 10px;
         }
-
-        /* Page 2: Social Media Links */
-        #page2 {
-            background-color: white;
-            color: #8B0000;
-            padding: 20px;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        #follow {
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
+        button {
+            background: none;
+            border: none;
             cursor: pointer;
         }
 
-        /* Page 3: Announcements */
-        #page3 {
-            background-color: #8B0000;
+        /* Page 1 Styles */
+        #page1 {
+            background-color: red;
             color: white;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             height: 100vh;
+            font-weight: bold;
+        }
+        .artist-name {
+            font-family: 'Times New Roman', serif;
+            margin-top: 20px;
+            font-size: 3rem;
+        }
+        .single-cover {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        .single-title {
+            font-family: 'Squeeze', sans-serif;
+            margin-bottom: 20px;
+            font-size: 2rem;
         }
 
-        .email {
+        /* Page 2 Styles */
+        #page2 {
+            background-color: white;
+            color: red;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            font-weight: bold;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin-bottom: 50px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Transition Gradient */
+        .transition {
+            animation: gradient 1s forwards;
+        }
+        @keyframes gradient {
+            from {
+                background: red;
+            }
+            to {
+                background: white;
+            }
+        }
+
+        /* Clickable Elements */
+        .clickable {
             position: fixed;
+        }
+        .email-btn {
+            bottom: 10px;
+            left: 10px;
+            color: inherit;
+        }
+        .next-page-btn {
             bottom: 10px;
             right: 10px;
-            color: white;
         }
-
-        .email a {
-            color: white;
-            text-decoration: none;
+        .back-home-btn {
+            bottom: 10px;
+            right: 10px;
         }
     </style>
 </head>
 <body>
+
     <!-- Page 1: Introduction -->
     <div id="page1">
         <div class="artist-name">WYNS</div>
-        <div>Feel this aura, you can go down lower.</div>
-        <img class="logo" src="<!-- WhatsApp Image 2024-10-16 at 18.49.57_c510ea40.jpg -->" alt="Album Cover">
-
-        <div class="nav-buttons">
-            <a href="#page2">Next</a>
+        <div class="single-cover" 
+             style="background-image: url('PLACE_YOUR_SINGLE_COVER_URL_HERE');">
         </div>
-        <div class="email">
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
-        </div>
+        <div class="single-title">WONDA</div>
+        <button class="clickable next-page-btn" onclick="showPage2()">Next</button>
     </div>
 
-    <!-- Page 2: Social Media Links -->
+    <!-- Page 2: Social Links -->
     <div id="page2">
-        <div id="follow">FOLLOW</div>
+        <div class="artist-name">FOLLOW</div>
         <div class="social-icons">
-            <!-- Instagram -->
-            <a href="https://instagram.com/wynslipa" target="_blank">
-                <img class="social-icon" 
-                     src="<!-- PASTE INSTAGRAM ICON URL HERE -->" 
-                     alt="Instagram">
+            <a href="https://www.instagram.com/wynslipa/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
             </a>
-            
-            <!-- Facebook -->
-            <a href="https://facebook.com/Wyns William" target="_blank">
-                <img class="social-icon" 
-                     src="<!-- PASTE FACEBOOK ICON URL HERE -->" 
-                     alt="Facebook">
+            <a href="http://tiktok.com/@wynslipa" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/TikTok_logo.svg" alt="TikTok">
             </a>
-
-            <!-- Twitter -->
             <a href="https://twitter.com/wynslipa" target="_blank">
-                <img class="social-icon" 
-                     src="<!-- PASTE TWITTER ICON URL HERE -->" 
-                     alt="Twitter">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
             </a>
-
-            <!-- YouTube -->
-            <a href="https://WYNSLIPA" target="_blank">
-                <img class="social-icon" 
-                     src="<!-- PASTE YOUTUBE ICON URL HERE -->" 
-                     alt="YouTube">
+            <a href="https://youtube.com/c/Wynslipa" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+            <a href="https://open.spotify.com/user/31zdfiw44wfjdlyteuedjrknctbq?si=ywp21V8LTXCDUI7B32s_2w" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify">
             </a>
         </div>
-
-        <div class="nav-buttons">
-            <a href="#page3">Next</a>
-        </div>
-        <div class="email">
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
-        </div>
+        <button class="clickable back-home-btn" onclick="showPage1()">Home</button>
     </div>
 
-    <!-- Page 3: Announcements -->
-    <div id="page3">
-        <h2>Announcements</h2>
-        <p>Details about upcoming projects go here.</p>
+    <!-- Clickable Email Button -->
+    <a href="mailto:wwlabelw@gmail.com" class="clickable email-btn">Email</a>
 
-        <div class="nav-buttons">
-            <a href="#page1">Back to Home</a>
-        </div>
-        <div class="email">
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
-        </div>
-    </div>
+    <script>
+        // JavaScript to handle page transitions
+        function showPage2() {
+            document.getElementById('page1').classList.add('transition');
+            setTimeout(() => {
+                document.getElementById('page1').style.display = 'none';
+                document.getElementById('page2').style.display = 'flex';
+            }, 500);
+        }
+
+        function showPage1() {
+            document.getElementById('page2').classList.add('transition');
+            setTimeout(() => {
+                document.getElementById('page2').style.display = 'none';
+                document.getElementById('page1').style.display = 'flex';
+            }, 500);
+        }
+    </script>
 </body>
 </html>
